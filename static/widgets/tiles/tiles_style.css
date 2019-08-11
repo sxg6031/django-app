@@ -1,0 +1,7 @@
+.tile{
+    padding: 5px;
+    animation-duration: 1s;
+    
+    /* visibility */
+    visibility: hidden;
+}

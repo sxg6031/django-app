@@ -1,0 +1,65 @@
+section {
+    position: relative;
+    top: 100px;
+}
+
+.menu_bar {
+    background-color: aqua;
+}
+
+.caption{
+    color: aqua;
+}
+
+.cover_image {
+    background-color: aqua;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.trigger2 {
+    /* should be more than the top of section */
+    position: relative;
+    top: 200px;
+}
+
+.trigger3 {
+    position: relative;
+    top: 350px;
+}
+
+.about_card_container {
+    position: relative;
+    top: 400px;
+}
+
+.heading {
+    animation-duration: 1s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: #ddb260;
+
+    /* visibility */
+    visibility: hidden;
+}
+
+.heading2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: #ddb260;
+
+    /* visibility */
+    visibility: hidden;
+}
+
+.heading3{
+    animation-duration: 3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: #ddb260;
+
+    /* visibility */
+    visibility: hidden;
+}

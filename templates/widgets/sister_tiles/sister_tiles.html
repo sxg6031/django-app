@@ -1,0 +1,19 @@
+{% load static %}
+<div class="row">
+    <div class="col-sm">
+        {% if sec2_image1 == '' %}
+        <img class="left_tile" src="{{ sec2_image1 }}" alt="image">
+        {% else %}
+        <img class="left_tile img-fluid" src="{{ sec2_image1.url }}" alt="image">
+        {% endif %}
+    </div>
+
+    <div class="col-sm">
+        {% if sec2_image2 == '' %}
+        <img class="right_tile" src="{{ sec2_image2 }}" alt="image">
+        {% else %}
+        <img class="right_tile img-fluid" src="{{ sec2_image2.url }}" alt="image">
+        {% endif %}
+
+    </div>
+</div>

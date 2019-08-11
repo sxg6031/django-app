@@ -1,0 +1,22 @@
+.video_heading{
+    color: dimgray;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 40px;
+}
+
+.video_para{
+    position: relative;
+    top: 10px;
+    color: darkviolet;
+    font-family: 'Alegreya SC', serif;
+    font-size: 30px;
+}
+
+hr{
+    border-width: 2px;
+}
+
+.video-card{
+    animation-duration: 3s;
+    visibility: hidden;
+}

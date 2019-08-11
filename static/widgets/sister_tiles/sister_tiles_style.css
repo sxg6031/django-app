@@ -1,0 +1,24 @@
+.left_tile {
+    height: inherit;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.right_tile {
+    height: inherit;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+    visibility: hidden;
+}
+
+.tile_heading {
+    padding: inherit;
+    padding-bottom: 10px;
+}

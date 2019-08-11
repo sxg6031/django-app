@@ -1,0 +1,93 @@
+<!-- widget: tiles begin -->
+{% load static %}
+<div class="row">
+    <div class="col-sm card tile">
+        {% if image1 == '' %}
+        <img class="" src="{{ image1 }}" alt="image1">
+        {% else %}
+        <img class="img-fluid" src="{{ image1.url }}" alt="image1">
+        {% endif %}
+
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image1_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image1_para }}</p>
+        </div>
+    </div>
+
+    <div class="col-sm card tile">
+        {% if image2 == '' %}
+        <img class="" src="{{ image2 }}" alt="image2">
+        {% else %}
+        <img class="img-fluid" src="{{ image2.url }}" alt="image2">
+        {% endif %}
+        
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image2_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image2_para }}</p>
+        </div>
+    </div>
+
+    <div class="col-sm card tile">
+        {% if image3 == '' %}
+        <img class="" src="{{ image3 }}" alt="image3">
+        {% else %}
+        <img class="img-fluid" src="{{ image3.url }}" alt="image3">
+        {% endif %}
+        
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image3_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image3_para }}</p>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-sm card tile">
+        {% if image4 == '' %}
+        <img class="tile" src="{{ image4 }}" alt="image4">
+        {% else %}
+        <img class="img-fluid" src="{{ image4.url }}" alt="image4">
+        {% endif %}
+        
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image4_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image4_para }}</p>
+        </div>
+    </div>
+
+    <div class="col-sm card tile">
+        {% if image5 == '' %}
+        <img class="tile" src="{{ image5 }}" alt="image5">
+        {% else %}
+        <img class="img-fluid" src="{{ image5.url }}" alt="image5">
+        {% endif %}
+        
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image5_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image5_para }}</p>
+        </div>
+    </div>
+
+    <div class="col-sm card tile">
+        {% if image6 == '' %}
+        <img class="tile" src="{{ image6 }}" alt="image6">
+        {% else %}
+        <img class="img-fluid" src="{{ image6.url }}" alt="image6">
+        {% endif %}
+        
+        <div class="card-body">
+            <h4 class="card-title video_heading">{{ image6_heading }}</h4>
+            <hr>
+            <p class="card-text video_para">{{ image6_para }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- ends -->

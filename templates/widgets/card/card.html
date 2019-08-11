@@ -1,0 +1,49 @@
+{% load static %}
+<!-- Card widget -->
+<div class="w3-container">
+
+    <div class="w3-card-4 w3-section">
+        <div class="w3-container w3-teal">
+            <h2>About</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                {% if profile_picture == '' %}
+                <img src="{{ profile_picture }}" alt="Alps" style="width:100%">
+                {% else %}
+                <img src="{{ profile_picture.url }}" alt="Alps" style="width:100%">
+                {% endif %}
+            </div>
+
+            <div class="col-sm">
+                <p class="profile_para">{{ profile_para }}</p>
+            </div>
+
+        </div>
+        
+        <br><br>
+        
+        <div class="row">
+            <div class="col-sm">
+                <div class="container-fluid">
+                    <div class="embed-responsive embed-responsive-16by9 shadow">
+                        {{ my_map|safe }}
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-sm">
+                <h2 class="contact_info"><i class="fas fa-map-marked-alt"></i> Address: {{ address }}</h2>
+                <h2 class="contact_info"><i class="fas fa-phone"></i> Phone: <a href="tel:{{ phone }}">{{ phone }}</a></h2>
+                <h2 class="contact_info"><i class="fas fa-envelope-open-text"></i> Email: <a href="mailto:{{ email }}"></a> {{ email }}</h2>
+                <a href="{{ facebook }}" class="fa fa-facebook"></a>
+                <a href="{{ youtube }}" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end -->

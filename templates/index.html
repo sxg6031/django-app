@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mantra7 Events</title>
+
+    <!-- ========= fonts ================== -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gilda+Display&display=swap" rel="stylesheet">
+    <!-- end -->
+    
+    <!-- == font awesome == -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ===== end ==== -->
+
+    <!-- ============ external libraries =========== -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- =========== end ======================= -->
+
+    <link rel="stylesheet" href="{% static 'style.css' %}?{% now "U" %}">
+
+    <!-- widgets stylesheet -->
+
+    <link rel="stylesheet" href="{% static 'widgets/tiles/tiles_style.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'widgets/sister_tiles/sister_tiles_style.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'widgets/youtube_tiles/video_tiles_style.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'widgets/about_card/about_card_style.css' %}?{% now "U" %}">
+
+    <!-- end -->
+</head>
+
+
+<body>
+
+    <header>
+        
+        <!-- contains cover image -->
+        <div class="container-fluid">
+            {% if cover_image == '' %}
+            <img class="cover_image" src="{{ cover_image }}" alt="cover image">
+            {% else %}
+            <img class="cover_image" src="{{ cover_image.url }}" alt="cover image">
+            {% endif %}
+        </div>
+        <!-- end -->
+
+    </header>
+
+
+    <div class="main">
+
+        <section class="container-fluid trigger1">
+
+            <h2 class="heading"> {{ heading }} </h2>
+            <!-- tiles widget import -->
+            {% include "widgets\tiles\tiles.html" %}
+
+            <!-- end -->
+
+        </section>
+
+
+        <section class="container-fluid trigger2">
+
+            <h2 class="heading2">{{ sec2_heading }}</h2>
+            <!-- sister tiles widget import -->
+            <div class="sister_tiles_container">
+                {% include "widgets\sister_tiles\sister_tiles.html" %}
+            </div>
+            <!-- end -->
+
+        </section>
+
+        <section class="container-fluid trigger3">
+           <h2 class="heading3"> Video Gallery </h2>
+            <!-- youtube_tiles_widget import -->
+            {% include "widgets\youtube_tiles\video_tiles.html" %}
+            <!-- end -->
+        </section>
+
+        <section class="about_card_container">
+            <!-- card widget import -->
+            {% include "widgets\card\card.html" %}
+            <!-- end -->
+        </section>
+
+    </div>
+
+    <footer class="container-fluid">
+
+    </footer>
+
+
+    <!-- ============== scripts ==================== -->
+    <!-- widgets scripts -->
+
+    <script src="{% static 'widgets/tiles/tiles_animation.js' %}?{% now "U" %}"></script>
+    <script src="{% static 'widgets/sister_tiles/sister_tiles_func.js' %}?{% now "U" %}"></script>
+    <script src="{% static 'widgets/youtube_tiles/video_tiles_animation.js' %}?{% now "U" %}"></script>
+
+    <!-- end -->
+
+    <script src="{% static 'script.js' %}?{% now "U" %}"></script>
+
+</body>
+
+</html>
