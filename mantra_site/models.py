@@ -4,10 +4,18 @@ from django.db import models
 
 
 class Cover(models.Model):
+    class Meta:
+        verbose_name_plural = 'Cover'
+
     cover_image = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return "My cover image"
+
 
 
 class Tiles(models.Model):
+    class Meta:
+        verbose_name_plural = 'Tiles'
 
     heading = models.CharField(max_length=255, null=True, blank=True)
 
@@ -40,6 +48,8 @@ class Tiles(models.Model):
 
 
 class Section2(models.Model):
+    class Meta:
+        verbose_name_plural = 'Section2'
 
     sec2_heading = models.CharField(max_length=255)
     sec2_image1 = models.ImageField(null=True, blank=True)
@@ -50,6 +60,8 @@ class Section2(models.Model):
 
 
 class Videos(models.Model):
+    class Meta:
+        verbose_name_plural = 'Videos'
 
     video1 = models.TextField(default="Video not available")
     video1_heading = models.CharField(max_length=255)
@@ -63,8 +75,13 @@ class Videos(models.Model):
     video3_heading = models.CharField(max_length=255)
     video3_para = models.TextField()
 
+    def __str__(self):
+        return "Your Videos"
+
 
 class About(models.Model):
+    class Meta:
+        verbose_name_plural = 'About'
 
     profile_picture = models.ImageField(null=True, blank=True)
     profile_para = models.TextField(default="Fill it out")
@@ -75,3 +92,6 @@ class About(models.Model):
     email = models.CharField(max_length=255)
     facebook = models.TextField(default="facebook.com")
     youtube = models.TextField(default="youtube.com")
+
+    def __str__(self):
+        return "Edit About Information"
